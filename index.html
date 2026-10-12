@@ -1,257 +1,94 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Corporx X</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="shortcut icon" href="assets/imge/favicon.png" type="image/png">
-    <link rel="stylesheet" href="assets/css/all.min.css">
+    <title>Todo App Version 2</title>
+<link href="/src/style.css" rel="stylesheet">
+   
 </head>
-<body>
-    <!-- header start -->
 
-        <header class="fixed top-0 left-0 w-full  bg-[#dddddd8a] z-100 flex items-center">
-           <div class="container max-w-[1200px] m-auto ">
-            <div class="flex justify-between items-center">
-              <div class="flex items-center">
-                <img class="w-[30px] h-[30px]" src="./assets/imge/logo.png" alt="header-logo">
-                <span class="font-bold text-3xl">AI</span>
-                <span class="text-3xl">Designer</span>
-              </div>
-              <div >
-                <nav>
-                  <ul class="flex gap-[20px] pr-[200px] uppercase">
-                    <li><a href="">product</a></li>
-                    <li><a href="">Community</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Affiliates</a></li>
-                  </ul>
-                </nav>
-              </div>
-              <div>
-                <nav>
-                  <ul class="flex gap-[10px] uppercase">
-                    <li><a href="">My Designs</a></li>
-                    <li><a class="rounded-[10px] text-white/70 bg-black p-[5px]" href="">Get premium</a></li>
-                    <li><a class="rounded-[10px] p-[3px] border border-[1px]" href="">sinup</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-           </div> 
-        </header>
-    
-    <!-- header end -->
-     
-     <div class="container max-w-[1200px] m-auto -z-1 ">
-    
-    <div class="mt-[100px]"><span><a href="">Templates &#8881; Websites &#8881; Portfolis</a></span></div>
-    </div>
+<body class="min-h-screen bg-slate-100 p-5">
 
+    <!-- Main Container -->
+    <div class="mx-auto mt-10 max-w-2xl rounded-2xl bg-white p-6 shadow-lg sm:p-8">
 
+        <!-- Header -->
+        <div class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-slate-800">
+                My Todo App
+            </h1>
 
+            <p class="mt-2 text-slate-500">
+                Organize your daily tasks
+            </p>
+        </div>
 
-    <div class="container max-w-[1200px] m-auto flex justify-between mt-[20px]">
-      <div>
-        <h5 class="text-3xl font-bold">Photographer Portfolio</h5>
-        <p class="mt-[10px]">Editorial photographer portfolio for timeless storytelling</p>
-      </div>
-      <div><i class="fa-regular fa-copy"></i> <span>4 uses</span> <span>1 page</span> 
-      
-      <button class="rounded-[10px] border-[1px] text-white bg-black px-[5px]"><a href="">Use this template <i class="fa-solid fa-circle-arrow-right"></i></a></button>
-      </div>
+        <!-- Add Task Form -->
+        <form id="main-form" class="mb-4 flex flex-col gap-3 sm:flex-row">
 
-    </div>
+            <input
+                id="input-form"
+                type="text"
+                placeholder="Enter your task..."
+                class="min-w-0 flex-1 rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+            >
 
+            <button
+                id="submit-btn"
+                type="submit"
+                class="rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700"
+            >
+                Add Task
+            </button>
 
+        </form>
 
-<!-- hero start -->
-<section class=" ">
-  <div class="container max-w-[1200px] m-auto ">
-    <div class="max-w-[1190px] m-auto border-[1px] rounded-[10px] overflow-hidden mt-[50px] relative ">
-     <div class="flex gap-[25px] h-[70px] items-center  bg-[#c0b3b3de] sticky w-[1190px] absolute ">
-      <nav class="">
-        <ul class="flex gap-[25px] pl-[5px]">
-          <li class="uppercase font-bold text-black/60">Portfolio</li>
-          <li class="uppercase font-bold text-black/60">JournalAbout</li>
-          <li class="uppercase font-bold text-black/60">Inquire</li>
-        </ul>
-      </nav>
-      
-      <div class="absolute left-1/2 transform -translate-x-1/2 text-center pl-[25px]">
-                
-        <a href="#" class="font-serif text-3xl md:text-4xl tracking-tighter font-medium " rel="nofollow">LUMIÈRE</a>
-      </div>
-     </div>
-   <div class=" w-full h-[600px] bg-[url(../imge/hero.png)] bg-center bg-cover bg-no-repeat ]"></div>
+        <!-- Error Message -->
+        <p id="eroormsg" class="mb-4 hidden text-sm text-red-500">
+            Please enter a task!
+        </p>
 
-    </div>
-
-    
-  </div>
-</section>
-
-
- <!-- hero end -->
-
-
- <!-- galary -->
- <section class="mt-[200px]">
-  <div class="container m-auto">
-    <div class="grid grid-cols-3 gap-[20px] ">
-      <div class=" row-span-3 overflow-hidden group"><img class="w-full h-full object-cover  grayscale rounded-3xl hover:grayscale-0 group-hover:scale-[1.2]  duration-500" src="./assets/imge/he1.jpg" alt=""></div>
-      <div class=" col-span-2 overflow-hidden group"><img class="rounded-3xl w-full h-[400px] object-cover grayscale hover:grayscale-0 group-hover:scale-[1.2] duration-500" src="./assets/imge/he2.jpg" alt=""></div>
-      <div class="group overflow-hidden"><img class=" rounded-3xl h-[416px] grayscale hover:grayscale-0 group-hover:scale-[1.2] duration-500" src="./assets/imge/d3.jpg" alt=""></div>
-       <div class="group overflow-hidden"><img class="rounded-3xl h-[416px] grayscale hover:grayscale-0 group-hover:scale-[1.2] duration-500" src="./assets/imge/d4.jpg" alt=""></div>
-     
-      
-    </div>
-  </div>
- </section>
-
-<!-- gelary end -->
-
-
-<!-- gellary-2 -->
- <section class="mt-[100px]">
-  <div class="container m-auto">
-    <div class="grid grid-cols-3 gap-[20px]">
-      <div class="relative col-span-3 overflow-hidden group"><img class="w-full h-full object-cover object-top group-hover:scale-[1.2] duration-700" src="./assets/imge/p1.jpg" alt="">
-    
-      </div>
-      
-      <div class=" -translate-y-[200px] overflow-hidden group">
-        <img class="border-[5px] border-white group-hover:scale-[1.1] duration-700" src="./assets/imge/p2.avif" alt=""></div>
         
-      <div class="group overflow-hidden"><img class="group-hover:scale-[1.1] duration-700 w-full" src="./assets/imge/p3.avif" alt=""></div>
-      <div class="p-10"><p class="font-serif text-3xl md:text-5xl leading-tight mb-6 ">"Photography is the pause button of life."</p>
-      <a href="#" class="text-xs uppercase tracking-[0.25em] border-b border-black pb-1 self-start hover:text-gray-500 transition-colors" rel="nofollow">Read the Journal</a>
-      </div>
-      
+
+        <!-- Task Header -->
+        <div class="mb-4 flex items-center justify-between">
+            <h2 class="text-xl font-bold text-slate-800">
+                My Tasks
+            </h2>
+
+            <span class="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
+                Total: <span id="count">0</span>
+            </span>
+        </div>
+
+        <!-- Task List -->
+        <div id="task-list" class="space-y-3">
+
+            <!-- Example Task 1 -->
+            
+            
+
+        </div>
+
+        <!-- Empty Message -->
+        <p class="mt-6 hidden text-center text-slate-400">
+            No tasks found!
+        </p>
+
+        <!-- Clear All Button -->
+        <div class="mt-6 border-t border-slate-200 pt-5 text-right">
+            <button
+                id="clear-btn"
+                type="button"
+                class="rounded-xl bg-red-600 px-5 py-3 font-semibold text-white transition hover:bg-red-700"
+            >
+                Clear All
+            </button>
+        </div>
+
     </div>
-  </div>
- </section>
- <!-- gellary-2end -->
- 
- <!-- cart strat -->
-  <section class="mb-50">
-    <div class="container m-auto">
-      <div class="grid grid-cols-3 gap-8">
-        <div class="relative -mt-[70px] group overflow-hidden">
-          <img class=" relative object-cover h-[500px] opacity-80 group-hover:opacity-100 group-hover:scale-[1.1] duration-700 " src="./assets/imge/c1.avif" alt="">
-          <div class="absolute top-8 left-0 right-0 text-center">
-                            <h3 class="font-serif text-5xl tracking-tight leading-none mix-blend-overlay">VOGUE</h3>
-                        </div>
-        
-        <div class="absolute inset-0 border border-white/20 m-4 pointer-events-none h-[470px]"></div>
-        </div>
-        <div class="relative group overflow-hidden">
-          <img class="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-[1.1] duration-700 " src="./assets/imge/c2.jpg" alt="">
-          <div class="absolute top-8 left-0 right-0 text-center">
-                            <h3 class="font-serif text-5xl tracking-tight leading-none mix-blend-overlay">TATLER</h3>
-                        </div>
-          <div class="absolute inset-0 border border-white/20 m-4 pointer-events-none h-[470px]"></div>
-        </div>
-        <div class="mt-[90px] relative group overflow-hidden">
-          <img class="object-cover w-full h-[500px] pr-5 opacity-80 group-hover:opacity-100 group-hover:scale-[1.1] duration-700 " src="./assets/imge/c3.jpeg" alt="">
-          <div class="absolute top-8 left-0 right-0 text-center">
-                            <h3 class="font-serif text-5xl tracking-tight leading-none mix-blend-overlay">ELLÉ</h3>
-                        </div>
-          <div class="absolute inset-0 border border-white/20 m-4 pointer-events-none h-[470px]"></div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- cart end -->
-
-  <!-- name strat -->
-   <section>
-    <div class="container m-auto">
-      <div class="grid grid-cols-2">
-        <div>
-                <span class="text-xs font-bold tracking-[0.2em] mb-8 block text-gray-400">INQUIRIES</span>
-                <h2 class="font-serif text-6xl md:text-8xl mb-8 leading-none">Let's Create<br><span class="italic text-gray-400">Together</span></h2>
-                
-                <form class="space-y-8 max-w-md mt-12">
-                    <div class="relative border-b border-black/20 focus-within:border-black transition-colors">
-                        <input type="text" placeholder="Name" class="w-full py-4 bg-transparent outline-none placeholder:text-black/40 font-serif text-xl">
-                    </div>
-                    <div class="relative border-b border-black/20 focus-within:border-black transition-colors">
-                        <input type="email" placeholder="Email" class="w-full py-4 bg-transparent outline-none placeholder:text-black/40 font-serif text-xl">
-                    </div>
-                    <div class="relative border-b border-black/20 focus-within:border-black transition-colors">
-                        <input type="text" placeholder="Event Date &amp; Location" class="w-full py-4 bg-transparent outline-none placeholder:text-black/40 font-serif text-xl">
-                    </div>
-                    
-                    <button class="mt-8 text-xs tracking-[0.2em] uppercase font-bold border-b border-black pb-1 hover:opacity-50 transition-opacity">
-                        Send Request
-                    </button>
-                </form>
-            </div>
-        <div class="overflow-hidden"> <img class="w-full h-full object-cover opacity-90 transition-transform duration-[2s] hover:scale-150" src="./assets/imge/sunf.jpg" alt=""></div>
-      </div>
-    </div>
-   </section>
-   <!-- name end -->
-    <!-- footer strat -->
-     <footer class="mt-[100px] bg-[#45556C] p-5">
-      <div class="container m-auto">
-        <div class="flex justify-between items-center pt-[50px]">
-          <div>
-            <img class="max-w-[50px]" src="./assets/imge/logo.png" alt="">
-            <p class="max-w-[250px] uppercase text-white/70">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-               Sit nam cum quo. Alias, aliquam eos!</p>
-          </div>
-          <div>
-            <h3 class="uppercase font-semibold text-white/70 ">About</h3>
-            <nav>
-              <ul class="text-white/40">
-                <li><a href="">Image to HTML Converter</a></li>
-                <li><a href="">Website Cloner</a></li>
-                <li><a href="">ASCII Generator</a></li>
-                <li><a href="">MCP</a></li>
-              </ul>
-            </nav>
-          </div>
-
-
-          <div>
-          <h3 class="uppercase font-semibold text-white/70 ">home</h3>
-          <nav>
-            <ul class="text-white/40">
-              <li><a href="">Brand Kit Generator</a></li>
-              <li><a href="">Prototype Generator</a></li>
-              <li><a href="">AI Website Redesign</a></li>
-            </ul>
-          </nav>
-          </div>
-          <div>
-            <h3 class="uppercase font-semibold text-white/70 ">content</h3>
-            <nav>
-              <ul class="text-white/40">
-                <li><a href=""> Generator</a></li>
-                 <li><a href="">AI Mobile </a></li>
-                  <li><a href="">App Design Tool</a></li>
-                   <li><a href="">joro</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-
-      <div class=" flex justify-center item-center border-t border-white">
-        <h4 class="">© 2026 AIDesigner Inc. All rights reserved.</h4>
-      </div>
-     </footer>
-     <!-- footer end -->
-       
-
-
-
-
-
-
+<script type="module" src="/src/main.js"></script>
 </body>
 </html>
